@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet groomer</title>
-    <link href="/styles.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <nav></nav>
+        <nav>
+
+        </nav>
     </header>
-    <main></main>
+    <section class="appointment">
+        <div class="blocks">
+            <div class="block1">
+                <form action="">
+                    <fieldset>
+                        <legend>Appointments</legend>
+                        <label for="when"><img src="./img/clock.png" alt="">When?</label>
+                        <div>
+                            <input type="date" name="when" min="2021-01-01" max="2035-31-12" required>
+                            <input type="time" name="when" required>
+                        </div>
+
+                        <label for="employee"><img src="./img/employee.png" alt="">Which employee?</label>
+                        <input type="text" name="employee">
+
+                        <label for="client"><img src="./img/target.png" alt="">Client frequency?</label>
+                        <input type="text" name="client">
+
+                        <label for="services"><img src="./img/hair-comb.png" alt="">What services?</label>
+                        <input type="text" name="services">
+
+                        <label for="size"><img src="./img/weighing-machine.png" alt="">Pet size?</label>
+                        <input type="text" name="size">
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="block2">
+                <img src="./img/pets-grooming.jpg" alt="">
+            </div>
+
+    </section>
+
     <script src="/scripts.js"></script>
 </body>
+
 </html>
