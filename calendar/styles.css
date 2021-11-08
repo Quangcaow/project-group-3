@@ -230,6 +230,61 @@ button:hover {
   cursor: pointer;
 }
 
+.time-picker {
+  display: flex;
+  flex-flow: column;
+  font-size: 3rem;
+  width: 45rem;
+  background-color: #000000;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0.5rem 3rem;
+  border-radius: 10px;
+  padding: 2rem 0;
+}
+
+.time-picker__header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+
+.time-picker__title,
+.time-picker__month {
+  flex: 1 1 40%;
+}
+.time-picker__month {
+  text-align: right;
+}
+.time-picker__grid {
+  display: flex;
+}
+.time-picker__column {
+  flex: 1 1 45%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.time-picker__morning,
+.time-picker__afternoon {
+  font-size: 10px;
+}
+.time-picker__hour {
+  width: 80%;
+  text-align: center;
+  margin: 10px;
+  border: solid 1px gray;
+  border-radius: 5px;
+  cursor: pointer;
+  height: calc(40.2rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
 @media screen and (min-width: 40em) {
   .appoitment {
     width: 100%;
