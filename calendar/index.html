@@ -38,18 +38,21 @@
             <form action="">
                 <fieldset>
                     <legend>Appointments</legend>
-                    <label for="when"><img src="../img/clock.png" alt="">When?</label>
-                    <div>
-                        <input type="date" name="when" min="2021-01-01" max="2035-31-12" required>
-                        <input type="time" name="when" required>
-                    </div>
+                    <label for="name"><img src="../img/clock.png" alt="">Name</label>
+                    <input id="name" type="text" name="name" placeholder="Name" required>
 
+                    <label for="email"><img src="../img/clock.png" alt="">Email</label>
+                    <input id="email" type="email" name="email" placeholder="e.g.@email.e.g" required>
+
+                    <label for="phone"><img src="../img/clock.png" alt="">Phone</label>
+                    <input id="phone" type="tel" name="phone" pattern="0[0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="0xx xxx xx xx" required>
                     <label for="employee"><img src="../img/employee.png" alt="">Which employee?</label>
                     <select name="employee" id="employee">
                         <option value="alan">Alan</option>
                         <option value="quang">Quang</option>
                         <option value="kameela">Kameela</option>
                         <option value="smaillimp">Smaillim</option>
+                        <option value="smaillimp">Any</option>
                     </select>
                     <!-- <input type="text" name="employee"> -->
 
@@ -68,9 +71,13 @@
                     <label for="size"><img src="../img/weighing-machine.png" alt="">Pet size?</label>
                     <input type="text" name="size">
                 </fieldset>
-                <button type="submit">Schedule</button>
+                <div class="form-buttons">
+                    <button type="submit">Schedule</button>
+                    <button type="submit"><a href="/calendar/index.html">Go back</a></button>
+                </div>
             </form>
         </div>
+        <button class="btn">Display</button>
     </div>
 
     <script src="scripts.js"></script>
