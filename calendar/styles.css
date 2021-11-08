@@ -30,7 +30,7 @@ body {
 
 .calendar {
   width: 45rem;
-  height: 52rem;
+  /* height: 52rem; */
   background-color: #000000;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
   border-radius: 10px;
@@ -284,6 +284,31 @@ button:hover {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+}
+
+.button_container {
+  padding: 50px;
+}
+.button_container button {
+  all: revert;
+  height: calc(40.2rem / 7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #167e56;
+  border: 1px solid white;
+  transition: background-color 0.3s;
+}
+.button_container button:hover {
+  background-color: rgb(22, 67, 126);
+}
+.current {
+  background-color: #167e5642;
+}
+.booked {
+  background-color: #726b74;
+  cursor: auto;
 }
 @media screen and (min-width: 40em) {
   .appoitment {

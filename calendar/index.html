@@ -17,6 +17,11 @@
 
   <body>
     <div class="container">
+      <div class="button_container">
+        <button onclick="authenticate().then(loadClient)">
+          Authorize and Load
+        </button>
+      </div>
       <div class="calendar">
         <div class="month">
           <i class="fas fa-angle-left prev"></i>
@@ -147,16 +152,16 @@
             <div class="time-picker__column">
               <p class="time-picker__afternoon">Afternoon</p>
               <div class="time-picker__hour">
-                <p data-hour="1">01:00PM</p>
+                <p data-hour="13">01:00PM</p>
               </div>
               <div class="time-picker__hour">
-                <p data-hour="2">02:00PM</p>
+                <p data-hour="14">02:00PM</p>
               </div>
               <div class="time-picker__hour">
-                <p data-hour="3">03:00PM</p>
+                <p data-hour="15">03:00PM</p>
               </div>
               <div class="time-picker__hour">
-                <p data-hour="4">04:00PM</p>
+                <p data-hour="16">04:00PM</p>
               </div>
             </div>
           </div>
