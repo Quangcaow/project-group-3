@@ -122,7 +122,7 @@ body {
   background-color: #167e56;
 }
 
-/* Appoitment */
+/* Appoitment form */
 
 .appoitment {
   margin-top: 50px;
@@ -131,6 +131,7 @@ body {
   width: 80%;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 legend {
@@ -149,6 +150,7 @@ legend {
 
 form {
   width: 90%;
+  margin: 0 auto;
 }
 
 fieldset {
@@ -161,7 +163,7 @@ fieldset {
 }
 
 fieldset > * {
-  flex: 1 50rem;
+  flex: 1 0 35rem;
 }
 
 form div {
@@ -198,14 +200,28 @@ label img {
   border-radius: 50%;
 }
 
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 button {
   width: 170px;
   height: 40px;
-  background: #167e56;
+  background-color: #167e56;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.form-buttons button:last-child {
+  background-color: rgb(238, 255, 0);
+}
+
+button a {
+  color: #000000;
+  text-decoration: none;
 }
 
 button:hover {
@@ -213,3 +229,10 @@ button:hover {
   border: 0.2rem solid #777;
   cursor: pointer;
 }
+
+@media screen and (min-width: 40em) {
+  .appoitment  {
+    width: 100%;
+  }
+}
+
