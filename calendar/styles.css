@@ -98,7 +98,7 @@ body {
   font-size: 1.4rem;
   margin: 0.3rem;
   width: calc(40.2rem / 7);
-  height: 5rem;
+  height: calc(40.2rem / 7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,8 +231,7 @@ button:hover {
 }
 
 @media screen and (min-width: 40em) {
-  .appoitment  {
+  .appoitment {
     width: 100%;
   }
 }
-
