@@ -81,6 +81,7 @@ document.querySelector(".next").addEventListener("click", () => {
 
 renderCalendar();
 
+
 /** button to dysplay ures form */
 
 let btn = document.querySelector(".btn");
@@ -92,3 +93,4 @@ function clickHandler(event) {
   document.querySelector(".calendar").style.display = "none";
   btn.style.display = "none";
 }
+
