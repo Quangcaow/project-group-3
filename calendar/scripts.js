@@ -91,7 +91,9 @@ btn.addEventListener("click", clickHandler);
 
 function clickHandler(event) {
   console.log("Button Clicked");
+
   console.log(gapi);
+
   document.querySelector(".appoitment").style.display = "block";
   document.querySelector(".calendar").style.display = "none";
   btn.style.display = "none";
@@ -160,3 +162,4 @@ async function retrieveTheEventsList() {
 
   return event_list.result.items;
 }
+
