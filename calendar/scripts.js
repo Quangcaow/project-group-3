@@ -84,12 +84,13 @@ renderCalendar();
 
 /** button to dysplay ures form */
 
-let btn = document.querySelector('.btn');
-btn.addEventListener('click', clickHandler);
+let btn = document.querySelector(".btn");
+btn.addEventListener("click", clickHandler);
 
 function clickHandler(event) {
-  console.log('Button Clicked');
+  console.log("Button Clicked");
   document.querySelector(".appoitment").style.display = "block";
   document.querySelector(".calendar").style.display = "none";
   btn.style.display = "none";
 }
+

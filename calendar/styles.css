@@ -163,7 +163,9 @@ fieldset {
 }
 
 fieldset > * {
-  flex: 1 0 35rem;
+
+  flex: 1 45rem;
+
 }
 
 form div {
@@ -230,9 +232,30 @@ button:hover {
   cursor: pointer;
 }
 
-@media screen and (min-width: 40em) {
-  .appoitment  {
+
+@media screen and (max-width: 40em) {
+  .appoitment {
     width: 100%;
+  }
+  body {
+    width: 100%;
+  }
+
+  html {
+    font-size: 55% !important;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .appoitment {
+    width: 100%;
+  }
+  body {
+    width: 100%;
+  }
+
+  html {
+    font-size: 43% !important;
   }
 }
 
