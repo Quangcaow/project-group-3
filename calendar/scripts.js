@@ -163,3 +163,13 @@ async function retrieveTheEventsList() {
   return event_list.result.items;
 }
 
+const timePickers = document.querySelectorAll('.time-picker__hour');
+timePickers.forEach ((element) => {
+  element.addEventListener('click', (e) =>{
+    const form = document.querySelector('.appoitment');
+    form.style.display = 'block'
+  })
+})
+
+
+
