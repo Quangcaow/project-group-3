@@ -30,7 +30,7 @@ body {
 
 .calendar {
   width: 45rem;
-  height: 52rem;
+  /* height: 52rem; */
   background-color: #000000;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
   border-radius: 10px;
@@ -98,7 +98,7 @@ body {
   font-size: 1.4rem;
   margin: 0.3rem;
   width: calc(40.2rem / 7);
-  height: 5rem;
+  height: calc(40.2rem / 7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,18 +233,87 @@ button:hover {
 }
 
 
-@media screen and (max-width: 40em) {
-  .appoitment {
-    width: 100%;
-  }
-  body {
-    width: 100%;
-  }
-
-  html {
-    font-size: 55% !important;
-  }
+.time-picker {
+  display: flex;
+  flex-flow: column;
+  font-size: 3rem;
+  width: 45rem;
+  background-color: #000000;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0.5rem 3rem;
+  border-radius: 10px;
+  padding: 2rem 0;
 }
+
+.time-picker__header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+
+.time-picker__title,
+.time-picker__month {
+  flex: 1 1 40%;
+}
+.time-picker__month {
+  text-align: right;
+}
+.time-picker__grid {
+  display: flex;
+}
+.time-picker__column {
+  flex: 1 1 45%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.time-picker__morning,
+.time-picker__afternoon {
+  font-size: 10px;
+}
+.time-picker__hour {
+  width: 80%;
+  text-align: center;
+  margin: 10px;
+  border: solid 1px gray;
+  border-radius: 5px;
+  cursor: pointer;
+  height: calc(40.2rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.button_container {
+  padding: 50px;
+}
+.button_container button {
+  all: revert;
+  height: calc(40.2rem / 7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #167e56;
+  border: 1px solid white;
+  transition: background-color 0.3s;
+}
+.button_container button:hover {
+  background-color: rgb(22, 67, 126);
+}
+.current {
+  background-color: #167e5642;
+}
+.booked {
+  background-color: #726b74;
+  cursor: auto;
+}
+
 
 @media screen and (max-width: 440px) {
   .appoitment {
@@ -258,4 +327,3 @@ button:hover {
     font-size: 43% !important;
   }
 }
-
