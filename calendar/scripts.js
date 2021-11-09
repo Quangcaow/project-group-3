@@ -86,18 +86,18 @@ renderCalendar();
 
 /** button to dysplay ures form */
 
-let btn = document.querySelector(".btn");
-btn.addEventListener("click", clickHandler);
+// let btn = document.querySelector(".btn");
+// btn.addEventListener("click", clickHandler);
 
-function clickHandler(event) {
-  console.log("Button Clicked");
+// function clickHandler(event) {
+//   console.log("Button Clicked");
 
-  console.log(gapi);
+//   console.log(gapi);
 
-  document.querySelector(".appoitment").style.display = "block";
-  document.querySelector(".calendar").style.display = "none";
-  btn.style.display = "none";
-}
+//   document.querySelector(".appoitment").style.display = "block";
+//   document.querySelector(".calendar").style.display = "none";
+//   btn.style.display = "none";
+// }
 
 // this will add the current class to the clicked div
 // current class: is a css class with light green background
@@ -163,13 +163,22 @@ async function retrieveTheEventsList() {
   return event_list.result.items;
 }
 
-const timePickers = document.querySelectorAll('.time-picker__hour');
-timePickers.forEach ((element) => {
-  element.addEventListener('click', (e) =>{
-    const form = document.querySelector('.appoitment');
-    form.style.display = 'block'
-  })
-})
+const timePickers = document.querySelectorAll(".time-picker__hour");
+timePickers.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    const form = document.querySelector(".appoitment");
+    form.style.display = "block";
+  });
+});
 
+document.querySelectorAll("input").addEventListener("click", (e) => {
+  e.stopPropagation();
+});
 
-
+document.querySelector("body").addEventListener("click", () => {
+  const form = document.querySelector(".appoitment");
+  if (form.style.display === "block") {
+    form.style.display = "none";
+    console.log("hello");
+  }
+});

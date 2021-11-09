@@ -125,9 +125,11 @@ body {
 /* Appoitment form */
 
 .appoitment {
+  position: absolute;
+  background-color: #cfccccaf;
   margin-top: 50px;
   margin-bottom: 50px;
-  display: flex;
+  /* display: flex; */
   width: 80%;
   justify-content: center;
   align-items: center;
@@ -163,9 +165,7 @@ fieldset {
 }
 
 fieldset > * {
-
   flex: 1 45rem;
-
 }
 
 form div {
@@ -231,7 +231,6 @@ button:hover {
   border: 0.2rem solid #777;
   cursor: pointer;
 }
-
 
 .time-picker {
   display: flex;
@@ -313,7 +312,6 @@ button:hover {
   background-color: #726b74;
   cursor: auto;
 }
-
 
 @media screen and (max-width: 440px) {
   .appoitment {

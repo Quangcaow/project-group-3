@@ -1,165 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pet groomer</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="button_container">
-        <button onclick="authenticate().then(loadClient)">
-          Authorize and Load
-        </button>
-      </div>
-      <div class="calendar">
-        <div class="month">
-          <i class="fas fa-angle-left prev"></i>
-          <div class="date">
-            <h1></h1>
-            <p></p>
-          </div>
-          <i class="fas fa-angle-right next"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet groomer</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="button_container">
+      <button onclick="authenticate().then(loadClient)">
+        Authorize and Load
+      </button>
+    </div>
+    <div class="calendar">
+      <div class="month">
+        <i class="fas fa-angle-left prev"></i>
+        <div class="date">
+          <h1></h1>
+          <p></p>
         </div>
-        <div class="weekdays">
-          <div>Sun</div>
-          <div>Mon</div>
-          <div>Tue</div>
-          <div>Wed</div>
-          <div>Thu</div>
-          <div>Fri</div>
-          <div>Sat</div>
-        </div>
-        <div class="days"></div>
+        <i class="fas fa-angle-right next"></i>
       </div>
-
-      <div class="appoitment">
-        <form action="">
-          <fieldset>
-            <legend>Appointments</legend>
-            <label for="name"><img src="../img/clock.png" alt="" />Name</label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Name"
-              required
-            />
-
-            <label for="email"
-              ><img src="../img/clock.png" alt="" />Email</label
-            >
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="e.g.@email.e.g"
-              required
-            />
-
-
-                    <label for="phone"><img src="../img/clock.png" alt="">Phone</label>
-
-
-                    <input id="phone" type="tel" name="phone" pattern="0[0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="0xx xxx xx xx" required>
-
-                    <label for="employee"><img src="../img/employee.png" alt="">Which employee?</label>
-                    <select name="employee" id="employee">
-                        <option value="alan">Alan</option>
-                        <option value="quang">Quang</option>
-                        <option value="kameela">Kameela</option>
-                        <option value="smaillimp">Smaillim</option>
-                        <option value="smaillimp">Any</option>
-                    </select>
-                    <!-- <input type="text" name="employee"> -->
-
-
-            <label for="services"
-              ><img src="../img/hair-comb.png" alt="" />What services?</label
-            >
-            <select name="employee" id="service">
-              <option value="haircut">Breed-Specific Haircuts</option>
-              <option value="bath">Baths for every breed</option>
-              <option value="customise">Customized packages</option>
-              <option value="walk-in">Walk-In Services</option>
-            </select>
-            <!-- <input type="text" name="services"> -->
-
-            <label for="size"
-              ><img src="../img/weighing-machine.png" alt="" />Pet size?</label
-            >
-            <input type="text" name="size" />
-          </fieldset>
-          <div class="form-buttons">
-            <button type="submit">Schedule</button>
-            <button type="submit">
-              <a href="/calendar/index.html">Go back</a>
-            </button>
-          </div>
-        </form>
+      <div class="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
       </div>
-      <button class="btn">Display</button>
-      <div class="time">
-        <p>Time Selector</p>
-        <p>Choose a time period</p>
+      <div class="days"></div>
+    </div>
 
-        <div class="time-picker">
-          <div class="time-picker__header">
-            <div class="time-picker__title">
-              <p>Pick a time interval</p>
-            </div>
-            <div class="time-picker__month">
-              <p>Month Switcher</p>
-            </div>
-          </div>
-          <div class="time-picker__grid">
-            <div class="time-picker__column">
-              <p class="time-picker__morning">Morning</p>
-              <div class="time-picker__hour">
-                <p data-hour="8">08:00AM</p>
-              </div>
-              <div class="time-picker__hour">
-                <p data-hour="9">09:00AM</p>
-              </div>
-              <div class="time-picker__hour">
-                <p data-hour="10">10:00AM</p>
-              </div>
-              <div class="time-picker__hour">
-                <p data-hour="11">11:00AM</p>
-              </div>
-            </div>
-            <div class="time-picker__column">
-              <p class="time-picker__afternoon">Afternoon</p>
-              <div class="time-picker__hour">
-                <p data-hour="13">01:00PM</p>
-              </div>
-              <div class="time-picker__hour">
-                <p data-hour="14">02:00PM</p>
-              </div>
-              <div class="time-picker__hour">
-                <p data-hour="15">03:00PM</p>
-              </div>
-              <div class="time-picker__hour">
-                <p data-hour="16">04:00PM</p>
-              </div>
-            </div>
-          </div>
+    <div class="appoitment">
+      <form action="">
+        <fieldset>
+          <legend>Appointments</legend>
+          <label for="name"><img src="../img/clock.png" alt="" />Name</label>
+          <input id="name" type="text" name="name" placeholder="Name" required />
 
+          <label for="email"><img src="../img/clock.png" alt="" />Email</label>
+          <input id="email" type="email" name="email" placeholder="e.g.@email.e.g" required />
+
+
+          <label for="phone"><img src="../img/clock.png" alt="">Phone</label>
+
+
+          <input id="phone" type="tel" name="phone" pattern="0[0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}"
+            placeholder="0xx xxx xx xx" required>
+
+          <label for="employee"><img src="../img/employee.png" alt="">Which employee?</label>
+          <select name="employee" id="employee">
+            <option value="alan">Alan</option>
+            <option value="quang">Quang</option>
+            <option value="kameela">Kameela</option>
+            <option value="smaillimp">Smaillim</option>
+            <option value="smaillimp">Any</option>
+          </select>
+          <!-- <input type="text" name="employee"> -->
+
+
+          <label for="services"><img src="../img/hair-comb.png" alt="" />What services?</label>
+          <select name="employee" id="service">
+            <option value="haircut">Breed-Specific Haircuts</option>
+            <option value="bath">Baths for every breed</option>
+            <option value="customise">Customized packages</option>
+            <option value="walk-in">Walk-In Services</option>
+          </select>
+          <!-- <input type="text" name="services"> -->
+
+          <label for="size"><img src="../img/weighing-machine.png" alt="" />Pet size?</label>
+          <input type="text" name="size" />
+        </fieldset>
+        <div class="form-buttons">
+          <button type="submit">Schedule</button>
+          <button type="submit">
+            <a href="index.html">Go back</a>
+          </button>
         </div>
+      </form>
+    </div>
+
+    <div class="time">
+      <p>Time Selector</p>
+      <p>Choose a time period</p>
+
+      <div class="time-picker">
+        <div class="time-picker__header">
+          <div class="time-picker__title">
+            <p>Pick a time interval</p>
+          </div>
+          <div class="time-picker__month">
+            <p>Month Switcher</p>
+          </div>
+        </div>
+        <div class="time-picker__grid">
+          <div class="time-picker__column">
+            <p class="time-picker__morning">Morning</p>
+            <div class="time-picker__hour">
+              <p data-hour="8">08:00AM</p>
+            </div>
+            <div class="time-picker__hour">
+              <p data-hour="9">09:00AM</p>
+            </div>
+            <div class="time-picker__hour">
+              <p data-hour="10">10:00AM</p>
+            </div>
+            <div class="time-picker__hour">
+              <p data-hour="11">11:00AM</p>
+            </div>
+          </div>
+          <div class="time-picker__column">
+            <p class="time-picker__afternoon">Afternoon</p>
+            <div class="time-picker__hour">
+              <p data-hour="13">01:00PM</p>
+            </div>
+            <div class="time-picker__hour">
+              <p data-hour="14">02:00PM</p>
+            </div>
+            <div class="time-picker__hour">
+              <p data-hour="15">03:00PM</p>
+            </div>
+            <div class="time-picker__hour">
+              <p data-hour="16">04:00PM</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="./google_api.js"></script>
-    <script src="scripts.js"></script>
-  </body>
+  </div>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="./google_api.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
 </html>
