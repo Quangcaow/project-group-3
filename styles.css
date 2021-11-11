@@ -8,34 +8,24 @@
 
 html {
   font-size: 62.5%;
+  color: rgb(255, 255, 255);
 }
 
 body {
-  width: 95%;
-  max-width: 90rem;
+  width: 100%;
   margin: 3rem auto;
-  background-color: #726b74;
+  background-color: #000000;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   text-align: center;
 }
 
-.header-section, main, footer {
-  background-color: #17151C;
-  border-radius: 25px;
-  height: 100vh;
-  margin-bottom: 1rem;
-  width: 100%;
-}
 
 .top-navbar {
   align-items: center;
-  background-color: #17151C;
-  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
@@ -48,69 +38,86 @@ header {
 
 .logo {
   color: rgb(255, 255, 255);
+  font-size: 3rem;
   padding: 1rem 1.5rem;
 }
 
 .top-navbar-links a {
+  color: rgb(255, 255, 255);
+  display: inline-block;
   font-size: 2rem;
   font-weight: 300;
-  display: inline-block;
-  color: rgb(255, 255, 255);
   padding: 1rem 1.5rem;
   text-decoration: none;
 }
 
 .top-navbar-links a:hover {
-  background-color: rgba(255, 255, 255, 0.884);
+  background-color: rgba(255, 255, 255, 0.459);
   border-radius: 10px;
   color: rgb(0, 0, 0);
 }
 
-h1 {
-  background-color: rgba(0, 0, 0);
-  border-radius: 10px;
-  color: rgb(255, 255, 255);
+.header-title {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
   margin-top: 3rem;
+  margin-bottom: 3rem;
   padding: 1.5rem 3rem;
+}
+
+.header-title h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
 
-/*
 .cards {
   display: flex;
+  font-size: 2rem;
   flex-wrap: wrap;
+  grid-gap: 3rem;
   justify-content: space-around;
   text-align: center;
+}
+.cards a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
 .card {
   flex: 0 0 calc(50% - 2em);
-  background-color: rgb(182, 182, 116);
-  border-radius: 15px;
-  margin-top: 4rem;
   max-width: 300px;
   max-height: 350px;
 }
 
 .card-image {
-  height: 350px;
-  max-width: 300px;
-  max-height: 350px;
+  height: 300px;
+  margin-bottom: 2rem;
   width: 300px;
-} */
+}
 
+.card-image:hover{
+  transform: translate(0, -15px);
+}
 
-button {
-  width: 170px;
-  height: 40px;
-  background: #43b0c8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  margin-bottom: 20px;
+.card-image img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+.about-us {
+  display: flex;
+  font-size: 2rem;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 5rem;
+  padding: 4rem;
+}
+
+.about-sections {
+  padding: 4rem;
 }
 
 @media screen and (min-width: 60em) {

@@ -6,6 +6,7 @@
 }
 
 html {
+  background-color: #000000;
   font-size: 62.5%;
 }
 
@@ -13,7 +14,6 @@ body {
   width: 95%;
   max-width: 90rem;
   margin: 3rem auto;
-  background-color: #726b74;
 }
 
 .container {
@@ -29,10 +29,8 @@ body {
 }
 
 /* nav bar */
-top-navbar {
+.top-navbar {
   align-items: center;
-  background-color: #17151c;
-  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
@@ -45,20 +43,21 @@ top-navbar {
 
 .logo {
   color: rgb(255, 255, 255);
+  font-size: 3rem;
   padding: 1rem 1.5rem;
 }
 
 .top-navbar-links a {
+  color: rgb(255, 255, 255);
+  display: inline-block;
   font-size: 2rem;
   font-weight: 300;
-  display: inline-block;
-  color: rgb(255, 255, 255);
   padding: 1rem 1.5rem;
   text-decoration: none;
 }
 
 .top-navbar-links a:hover {
-  background-color: rgba(255, 255, 255, 0.884);
+  background-color: rgba(255, 255, 255, 0.459);
   border-radius: 10px;
   color: rgb(0, 0, 0);
 }
