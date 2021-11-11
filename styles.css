@@ -119,6 +119,10 @@ header {
   padding: 4rem;
 }
 
+.hamburger {
+  display: none;
+}
+
 @media screen and (min-width: 60em) {
   .card {
     flex: 0 1 calc(50% - 2em);
@@ -147,14 +151,17 @@ header {
     opacity: 0.8;
   }
 
+  nav ul li {
+    margin: 3rem auto;
+  }
+
   nav ul {
-    position: absolute;
+    position: fixed;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 100vw;
     height: 100vh;
     transform: translateY(-100%);
@@ -172,6 +179,10 @@ header {
     align-items: center;
     font-size: 1.5rem;
     color: #fff;
+  }
+
+  .cancelIcon {
+    display: none;
   }
 
   .showMenu {
