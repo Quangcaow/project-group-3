@@ -23,7 +23,6 @@ header {
   text-align: center;
 }
 
-
 .top-navbar {
   align-items: center;
   display: flex;
@@ -98,7 +97,7 @@ header {
   width: 300px;
 }
 
-.card-image:hover{
+.card-image:hover {
   transform: translate(0, -15px);
 }
 
@@ -129,5 +128,53 @@ header {
 @media screen and (min-width: 40em) {
   .card {
     flex: 0 1 calc(100% - 2em);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  .hamburger {
+    display: flex;
+    margin: 0;
+    position: fixed;
+    z-index: 100;
+    top: 3rem;
+    right: 2rem;
+    padding: 3px;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  nav ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #030303;
+  }
+
+  nav ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .showMenu {
+    transform: translateY(0);
   }
 }
