@@ -28,6 +28,43 @@ body {
   flex-direction: column;
 }
 
+/* nav bar */
+top-navbar {
+  align-items: center;
+  background-color: #17151c;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.top-navbar-links {
+  display: flex;
+  list-style: none;
+}
+
+.logo {
+  color: rgb(255, 255, 255);
+  padding: 1rem 1.5rem;
+}
+
+.top-navbar-links a {
+  font-size: 2rem;
+  font-weight: 300;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+}
+
+.top-navbar-links a:hover {
+  background-color: rgba(255, 255, 255, 0.884);
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+}
+
+/*calendar  */
+
 .calendar {
   width: 45rem;
   /* height: 52rem; */
@@ -126,11 +163,11 @@ body {
 
 .appoitment {
   position: absolute;
-  background-color: #cfccccaf;
+  background-color: #5e5e5e;
   margin-top: 50px;
   margin-bottom: 50px;
   /* display: flex; */
-  width: 80%;
+  width: 50%;
   justify-content: center;
   align-items: center;
   display: none;
@@ -151,7 +188,7 @@ legend {
 }
 
 form {
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -198,8 +235,8 @@ label {
 }
 label img {
   margin-right: 20px;
-  background-color: #ffffff;
-  border-radius: 50%;
+  /* background-color: #ffffff; */
+  /* border-radius: 50%; */
 }
 
 .form-buttons {
