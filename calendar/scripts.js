@@ -171,14 +171,19 @@ timePickers.forEach((element) => {
   });
 });
 
-document.querySelectorAll("input").addEventListener("click", (e) => {
-  e.stopPropagation();
+// document.querySelectorAll("input").addEventListener("click", (e) => {
+//   e.stopPropagation();
+// });
+
+document.getElementById("btn").addEventListener("click", (e) => {
+  const form = document.querySelector(".appoitment");
+  form.style.display = "none";
 });
 
-document.querySelector("body").addEventListener("click", () => {
-  const form = document.querySelector(".appoitment");
-  if (form.style.display === "block") {
-    form.style.display = "none";
-    console.log("hello");
-  }
-});
+// document.querySelector("body").addEventListener("click", () => {
+//   const form = document.querySelector(".appoitment");
+//   if (form.style.display === "block") {
+//     form.style.display = "none";
+//     console.log("hello");
+//   }
+// });
