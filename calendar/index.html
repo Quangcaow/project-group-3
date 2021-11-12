@@ -14,13 +14,21 @@
 <body>
 
   <nav class="top-navbar">
+
     <div class="logo">Logo</div>
+
     <ul class="top-navbar-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="#about-us">About us</a></li>
-      <li><a href="#about-us">Services</a></li>
-      <li><a href="#contact">Conctat</a></li>
+      <li><a class="item" href="../index.html">Home</a></li>
+      <li><a class="item" href="../index.html">About us</a></li>
+      <li><a class="item" href="../index.html">Services</a></li>
+      <li><a class="item" href="../index.html">Contact</a></li>
     </ul>
+
+    <button class="hamburger">
+      <img class="menuIcon" src="../img/Hamber.png" alt="" width="35" height="35">
+      <img class="cancelIcon" src="../img/cancel.png" alt="" width="35" height="35">
+    </button>
+
   </nav>
 
 
@@ -55,14 +63,14 @@
       <form action="">
         <fieldset>
           <legend>Appointments</legend>
-          <label for="name"><img src="../img/clock.png" alt="" />Name</label>
+          <label for="name"><img src="../img/name-50.png" alt="" />Name</label>
           <input id="name" type="text" name="name" placeholder="Name" required />
 
-          <label for="email"><img src="../img/clock.png" alt="" />Email</label>
+          <label for="email"><img src="../img/email-64.png" alt="" />Email</label>
           <input id="email" type="email" name="email" placeholder="e.g.@email.e.g" required />
 
 
-          <label for="phone"><img src="../img/clock.png" alt="">Phone</label>
+          <label for="phone"><img src="../img/phone-50.png" alt="">Phone</label>
 
 
           <input id="phone" type="tel" name="phone" pattern="0[0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}"
@@ -152,6 +160,7 @@
   <script src="https://apis.google.com/js/api.js"></script>
   <script src="./google_api.js"></script>
   <script src="scripts.js"></script>
+
 </body>
 
 
