@@ -1,50 +1,115 @@
 <!DOCTYPE html>
 
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Pet groomer</title>
-		<link href="./styles.css" rel="stylesheet" />
-	</head>
-	<body>
-		<header>
-			<nav class="top-navbar">
-				<div class="logo">Logo</div>
-				<ul class="top-navbar-links">
-					<li><a href="#">Home</a></li>
-					<li><a href="#about-us">About us</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#contact">Conctat</a></li>
-				</ul>
-			</nav>
 
-			<h1>Are you a person of...?</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet groomer</title>
+  <link href="./styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
 
-			<section class="cards">
-				<article class="card">
-					<div class="card-image"><img src="" alt="" /></div>
-					<div class="card-title"><h2>Dogs</h2></div>
-				</article>
+<body>
+  <header>
+    <nav class="top-navbar">
+      <div class="logo">
+        <p>Logo</p>
+      </div>
 
-				<article class="card">
-					<div class="card-image"><img src="" alt="" /></div>
-					<div class="card-title"><h2>Cats</h2></div>
-				</article>
+      <ul class="top-navbar-links">
+        <li><a class="item" href="#">Home</a></li>
+        <li><a class="item" href="#about-us">About us</a></li>
+        <li><a class="item" href="#about-us">Services</a></li>
+        <li><a class="item" href="#contact">Contact</a></li>
+      </ul>
 
-				<article class="card">
-					<div class="card-image"><img src="" alt="" /></div>
-					<div class="card-title"><h2>Spiders</h2></div>
-				</article>
+      <button class="hamburger">
+        <img class="menuIcon" src="./img/Hamber.png" alt="" width="35" height="35">
+        <img class="cancelIcon" src="./img/cancel.png" alt="" width="35" height="35">
+      </button>
+    </nav>
 
-				<article class="card">
-					<div class="card-image"><img src="" alt="" /></div>
-					<div class="card-title"><h2>dinosaurs</h2></div>
-				</article>
-			</section>
-		</header>
-		<main></main>
-		<script src="/scripts.js"></script>
-	</body>
+    <section class="header-title">
+      <h1>Let us take care and groom your pet</h1>
+      <p>Click on one of the pictures to start booking an appoiment</p>
+    </section>
+  </header>
+
+  <main>
+    <section class="cards">
+      <a href="./calendar/index.html">
+        <article class="card">
+          <div class="card-image"><img src="./img/cat.jpg" alt="" /></div>
+          <div class="card-title">
+            <h2>Cats</h2>
+          </div>
+        </article>
+      </a>
+      <a href="./calendar/index.html">
+        <article class="card">
+          <div class="card-image"><img src="./img/dog.jpg" alt="" /></div>
+          <div class="card-title">
+            <h2>Dogs</h2>
+          </div>
+        </article>
+      </a>
+      <a href="./calendar/index.html">
+        <article class="card">
+          <div class="card-image"><img src="./img/snake.jpg" alt="" /></div>
+          <div class="card-title">
+            <h2>Snakes</h2>
+          </div>
+        </article>
+      </a>
+    </section>
+
+    <section class="about-us" id="about-us">
+      <section class="about-sections">
+        <h3>About us!</h3>
+        <p>
+          We are a new pet grooming saloon with certified employees who
+          are professional and loves animals
+        </p>
+        <p>
+          We are located in Zurich an offering the best service in town
+        </p>
+        </p>
+      </section>
+
+      <section class="about-sections">
+        <h3>Services</h3>
+        <p>
+          We have all the right tools to get your pet looking his best,
+          from different kinds of clippers and rounded scissors to an
+          adjustable grooming table. They’re equipped with nontoxic,
+          gentle shampoos for pet with skin allergies or irritations,
+          or those with fleas.
+        </p>
+        <p>
+          All our services are designed for the health of your pet. Taking into
+          account the products we use and their application.
+        </p>
+        <ul>
+          <li>Shampoo and conditioner</li>
+          <li>Blow dry</li>
+          <li>Nails trimmed</li>
+          <li>Ear cleaning</li>
+          <li>Teeth brushing</li>
+        </ul>
+      </section>
+    </section>
+
+  </main>
+  <footer id="contact">
+
+  </footer>
+
+  <script src="scripts.js">
+
+  </script>
+</body>
+
 </html>
